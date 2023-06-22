@@ -108,28 +108,41 @@ select {
 /* summary */
 .main__summary {
 	padding: 1.2em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 }
 
 .main__summary--div {
 	display: flex;
 	justify-content: space-between;
-	padding: 0.5em;
+	align-items: center;
+	padding: 0.9em;
+	border-radius: 0.5em;
 }
 
 .main__summary--reaction {
 	color: var(--light-red);
+	background-color: hsla(0, 100%, 67%, 0.1);
 }
 
 .main__summary--memory {
 	color: var(--orangey-yellow);
+	background-color: hsla(39, 100%, 56%, 0.1);
 }
 
 .main__summary--verbal {
 	color: var(--green-teal);
+	background-color: hsla(166, 100%, 37%, 0.1);
 }
 
 .main__summary--visual {
 	color: var(--cobalt-blue);
+	background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.summary__score {
+	color: var(--dark-gray-blue);
 }
 
 .main__button {
