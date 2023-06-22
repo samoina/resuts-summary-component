@@ -61,29 +61,51 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+1. With this project, I took some time to check out the difference between the _ and body selectors when doing the CSS reset. I had been brusihing over this aspect but finally understood that the _ selector is known as the universal selector. It represents ALL elements in the document and therefore styles under it will apply to each and every element.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+the 'body' selector on the other hand specifically targets the <body> element and the elements within it.
 
 ```css
-.proud-of-this-css {
-	color: papayawhip;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	font-size: 18px;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-	console.log('🎉');
-};
+2. In the past four projects I have done on Front-end Mentor, the feedback from the accessibility report always puzzled me - that the 'Page should contain a level-one heading'. Helpful feedback from one (@Abdul Khalid)[https://www.frontendmentor.io/profile/0xAbdulKhalid] showed me how to go about it.
+   _The need to add a level-one heading to improve accessibility by reading aloud the heading by screen readers, you can achieve this by adding a sr-only class to hide it from visual users (it will be useful for visually impaired users)_
+
+Thus, I added this to this challenge as below, where sr- is for screen reader. I am not sure if this is the correct way to write it with BEM naming convention:
+
+```html
+<h1 class="main__heading--sr">Results Summary</h1>
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```css
+.main__heading--sr {
+	/* clips elemet to a rectangle coordinates set to 0, hides it */
+	clip: rect(0 0 0 0);
+	/* create a rectangular shape inset 50% from all sides */
+	clip-path: inset(50%);
+	/* set height to 1px, extremely thin, almost invisible */
+	height: 1px;
+	/* hide content that spills over from the 1px height */
+	overflow: hidden;
+	/* position element absolutely in body */
+	position: absolute;
+	/* prevent line breaks */
+	white-space: nowrap;
+	/* similar to height, narrow it horizontally */
+	width: 1px;
+}
+```
 
 ### Continued development
 
@@ -100,14 +122,16 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Samoina Lives](https://samoinalives.wordpress.com/)
+- Frontend Mentor - [Samoina](https://www.frontendmentor.io/profile/samoina)
+- Twitter - [Samoina](https://www.twitter.com/samoina)
 
 ## Acknowledgments
 
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+
+```
+
+```

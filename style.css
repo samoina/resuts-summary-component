@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	font-size: 18px;
+	font-family: 'Hanken Grotesk', sans-serif;
+	font-weight: 500;
+	height: 100vh;
+}
+
+input,
+button,
+select {
+	font: inherit;
+}
+
+:root {
+	/* Primary */
+	--light-red: hsl(0, 100%, 67%);
+	--orangey-yellow: hsl(39, 100%, 56%);
+	--green-teal: hsl(166, 100%, 37%);
+	--cobalt-blue: hsl(234, 85%, 45%);
+
+	/* Gradients */
+	/* background */
+	--light-slate-blue: hsl(252, 100%, 67%);
+	--light-royal-blue: hsl(241, 81%, 54%);
+
+	/* circle */
+	--violet-blue: hsla(256, 72%, 46%, 1);
+	--persian-blue: hsla(241, 72%, 46%, 0);
+
+	/* Neutral */
+	--white: hsl(0, 0%, 100%);
+	--pale-blue: hsl(221, 100%, 96%);
+	--light-lavender: hsl(241, 100%, 89%);
+	--dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* Font Settings */
+.bold {
+	font-weight: 700;
+}
+
+.extra-bold {
+	font-weight: 800;
+}
+
+/* MAIN */
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Screen Reader heading */
+.main__heading--sr {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.main__result {
+	background-color: var(--light-royal-blue);
+	color: var(--light-lavender);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	border-bottom-left-radius: 1.5em;
+	border-bottom-right-radius: 1.5em;
+	padding: 1.2em 0;
+}
+
+.main__result--circle {
+	background-color: var(--violet-blue);
+	height: 6.2em;
+	width: 6.2em;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.main__result--largetext {
+	font-size: 2.5em;
+	color: var(--white);
+}
+
+.main__para--smalltext {
+	font-size: 15px;
+}
+
+/* summary */
+.main__summary {
+	padding: 1.2em;
+}
+
+.main__summary--div {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em;
+}
+
+.main__summary--reaction {
+	color: var(--light-red);
+}
+
+.main__summary--memory {
+	color: var(--orangey-yellow);
+}
+
+.main__summary--verbal {
+	color: var(--green-teal);
+}
+
+.main__summary--visual {
+	color: var(--cobalt-blue);
+}
+
+.main__button {
+	background-color: var(--dark-gray-blue);
+	width: 100%;
+	border: none;
+	color: var(--white);
+	padding: 1em;
+	border-radius: 2em;
+}
+
+/* Attribution */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
