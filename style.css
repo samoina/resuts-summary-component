@@ -154,6 +154,11 @@ select {
 	border-radius: 2em;
 }
 
+.main__button:hover {
+	background-color: var(--violet-blue);
+	cursor: pointer;
+}
+
 /* Attribution */
 .attribution {
 	font-size: 11px;
