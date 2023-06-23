@@ -31,7 +31,7 @@ Users should be able to:
 
 ## My process
 
-Took a mobile-first approach for this challenge.
+Took a mobile-first approach for this challenge. I first created the static files and then added the dynamism with the figures from the JSON file included in the starter package.
 
 ### Built with
 

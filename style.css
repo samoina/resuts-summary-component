@@ -86,7 +86,8 @@ select {
 }
 
 .main__result--circle {
-	background-color: var(--violet-blue);
+	/* background-color: var(--violet-blue); */
+	background: linear-gradient(var(--violet-blue), var(--light-royal-blue));
 	height: 6.2em;
 	width: 6.2em;
 	border-radius: 50%;
