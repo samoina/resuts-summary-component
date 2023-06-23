@@ -83,6 +83,7 @@ select {
 	border-bottom-left-radius: 1.5em;
 	border-bottom-right-radius: 1.5em;
 	padding: 1.2em 0;
+	display: none;
 }
 
 .main__result--circle {

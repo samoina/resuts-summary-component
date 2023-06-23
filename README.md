@@ -31,7 +31,9 @@ Users should be able to:
 
 ## My process
 
-Took a mobile-first approach for this challenge. I first created the static files and then added the dynamism with the figures from the JSON file included in the starter package. I am not sure where to start with this though. what appears at first when the page loads?
+Took a mobile-first approach for this challenge. I first created the static files and then added the dynamism with the figures from the JSON file included in the starter package.
+
+EDITED: I decided to hide the results section so that when a user clicks the button, it fetches the scores from the JSON file, and shows them on the summary section as well as displays the results section.
 
 ### Built with
 
@@ -88,10 +90,28 @@ Thus, I added this to this challenge as below, where sr- is for screen reader. I
 }
 ```
 
+2. I found myself needing the reminder on how to loop through BOTH the span elements with the same classname, and looping through the objects from the JSON file so that each iteration places the correct score in the correct div. I used the forEach() method as it provides an index parameter which i can then use to access the specific score for the span in that iteration
+
+```javascript
+//use the forEach loop to iterate over each element. this way we make use of the index parameter then use the same index for the score array
+
+const scoreSpan = document.querySelectorAll('.summary__score--percent');
+
+scoreSpan.forEach((span, index) => {
+	if (index < data.length) {
+		scoreSpan.forEach((span, index) => {
+			let currentScore = data[index].score;
+			span.textContent = currentScore;
+		});
+	}
+});
+```
+
 ### Continued development
 
-- Fetch the scoring from the JSON file
-- Do this project using ReactJS
+Fetch the scoring from the JSON file to display the scores dynamically and then show the result
+
+EDITED: this is done
 
 ## Author
 
