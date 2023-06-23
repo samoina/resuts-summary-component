@@ -52,26 +52,25 @@ submitButton.addEventListener('click', addScores);
 const submitButton = document.querySelector('.main__button'),
 	mainResultDiv = document.querySelector('.main__result');
 
-const showScores = () => {
+const showScores = async () => {
 	//fetch the data from the JSON file
-	fetch('data.json')
-		.then((res) => res.json())
-		.then((data) => {
-			console.log(data); //the array of objects with the scores
+	let res = await fetch('data.json');
+	let data = await res.json();
 
-			const scoreSpan = document.querySelectorAll('.summary__score--percent');
+	console.log(data); //the array of objects with the scores
 
-			//use the forEach loop to iterate over each element. this way we make use of the index parameter then use the same index for the score array
+	const scoreSpan = document.querySelectorAll('.summary__score--percent');
 
+	//use the forEach loop to iterate over each element. this way we make use of the index parameter then use the same index for the score array
+
+	scoreSpan.forEach((span, index) => {
+		if (index < data.length) {
 			scoreSpan.forEach((span, index) => {
-				if (index < data.length) {
-					scoreSpan.forEach((span, index) => {
-						let currentScore = data[index].score;
-						span.textContent = currentScore;
-					});
-				}
+				let currentScore = data[index].score;
+				span.textContent = currentScore;
 			});
-		});
+		}
+	});
 
 	//show the div to display the results
 	mainResultDiv.style.display = 'flex';
