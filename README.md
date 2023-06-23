@@ -41,10 +41,11 @@ EDITED: I decided to hide the results section so that when a user clicks the but
 - BEM naming convention
 - Flexbox
 - Mobile-first workflow
+- Vanilla Javascript
 
 ### What I learned
 
-1. With this project, I took some time to check out the difference between the _ and body selectors when doing the CSS reset. I had been brusihing over this aspect but finally understood that the _ selector is known as the universal selector. It represents ALL elements in the document and therefore styles under it will apply to each and every element.
+1. With this project, I took some time to check out the difference between the _ and body selectors when doing the CSS reset. I had been brushing over this aspect but finally understood that the _ selector is known as the universal selector. It represents ALL elements in the document and therefore styles under it will apply to each and every element.
 
 the 'body' selector on the other hand specifically targets the <body> element and the elements within it.
 
@@ -62,10 +63,11 @@ body {
 }
 ```
 
-2. In the past four projects I have done on Front-end Mentor, the feedback from the accessibility report always puzzled me - that the 'Page should contain a level-one heading'. Helpful feedback from one (@Abdul Khalid)[https://www.frontendmentor.io/profile/0xAbdulKhalid] showed me how to go about it.
+2. In the past four projects I have done on Front-end Mentor, the feedback from the accessibility report always puzzled me - that the 'Page should contain a level-one heading'. Helpful feedback from one [@Abdul Khalid](https://www.frontendmentor.io/profile/0xAbdulKhalid) showed me how to go about it.
    _The need to add a level-one heading to improve accessibility by reading aloud the heading by screen readers, you can achieve this by adding a sr-only class to hide it from visual users (it will be useful for visually impaired users)_
 
-Thus, I added this to this challenge as below, where sr- is for screen reader. I am not sure if this is the correct way to write it with BEM naming convention:
+Thus, I added this to this challenge as below, where sr- is for screen reader. Code Snippet from [@CSS Tricks](https://css-tricks.com/inclusively-hidden/)
+PS:I am not sure if this is the correct way to write it with BEM naming convention:
 
 ```html
 <h1 class="main__heading--sr">Results Summary</h1>
